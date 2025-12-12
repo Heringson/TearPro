@@ -18,7 +18,6 @@ O **Dev_Lima** é um sistema completo para gerenciamento de chão de fábrica, f
 7. [Como Executar Localmente](#como-executar-localmente)
 8. [Acesso Padrão (Admin)](#acesso-padrão-admin)
 9. [Autor e Contato](#autor-e-contato)
-10. [Licença](#-licença)
 
 
 ---
@@ -169,8 +168,4 @@ Desenvolvido por **Heringson Lima**.
  **WhatsApp:** [+55 (11) 94569-5118](https://wa.me/5511945695118)   
  **E-mail** heringson.heringson@gmail.com
 
----
 
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Sinta-se à vontade para usar e modificar.

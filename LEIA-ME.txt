@@ -1,0 +1,53 @@
+# Dev_Lima Manager - Documentação do Projeto
+
+Este arquivo descreve a estrutura e a responsabilidade de cada arquivo no projeto.
+
+## Estrutura de Arquivos
+
+### 1. Arquivos Raiz
+- **index.html**: O ponto de entrada da aplicação web. Contém a configuração do Tailwind CSS (estilos) e o elemento raiz onde o React é renderizado.
+- **index.tsx**: O arquivo TypeScript principal que inicializa o React e renderiza o componente `App`.
+- **App.tsx**: O componente principal da aplicação. Gerencia o estado global (usuário logado, máquinas, referências, tema claro/escuro) e o roteamento entre as diferentes "páginas" (Dashboard, Mapa, Inventário, etc.).
+- **types.ts**: Define todas as interfaces e tipos TypeScript usados no projeto (Machine, User, ProductReference, etc.), garantindo a tipagem forte e segurança do código.
+- **constants.ts**: Contém dados constantes e dados de exemplo (mock data) para inicializar a aplicação, incluindo a definição dos módulos da fábrica (Produção, Outros, Treinamento) e marcas de máquinas.
+- **metadata.json**: Arquivo de configuração de metadados do projeto.
+
+### 2. Componentes (Pasta /components)
+
+- **Sidebar.tsx**: A barra lateral de navegação. Exibe o logo, informações do usuário logado, links para as páginas e o botão de logout. Agora inclui o botão de alternar tema (Dark Mode).
+- **LoginScreen.tsx**: A tela de login e registro. Gerencia a autenticação do usuário.
+- **Dashboard.tsx**: A página inicial. Exibe estatísticas gerais da fábrica (total de máquinas, status) e miniaturas do mapa e lista recente.
+- **FactoryMap.tsx**: O mapa visual da fábrica. 
+    - Exibe os módulos de produção, almoxarifado (Outros) e a nova área de **Treinamento**.
+    - Renderiza ícones de máquinas com cores baseadas no status.
+    - Possui uma barra de navegação horizontal para ir rapidamente aos módulos.
+    - Responde ao comando "Localizar" rolando automaticamente para a máquina selecionada.
+- **MachineList.tsx**: A lista completa de inventário (tabela).
+    - Permite filtrar máquinas por diversos critérios.
+    - **Novidade**: O filtro de "Tipo" agora exibe a quantidade de máquinas existentes de cada categoria.
+    - Permite criar, editar e excluir máquinas.
+- **MaintenanceHistoryModal.tsx**: Um modal (janela sobreposta) que exibe o histórico de manutenções de uma máquina específica.
+- **ProductionBatch.tsx**: Gerenciamento de referências de produtos e planejamento de produção. Permite alocar máquinas para requisitos específicos de produtos.
+- **UserList.tsx**: Tela de administração de usuários (visível apenas para Admins). Permite editar dados e excluir usuários.
+- **SettingsScreen.tsx**: Tela de configurações onde o usuário pode editar seu perfil e o admin pode alterar configurações do sistema (nome, logo).
+
+## Funcionalidades Recentes Adicionadas
+
+1. **Dark Mode (Modo Escuro)**:
+   - Adicionado suporte a tema escuro em toda a aplicação.
+   - Botão de alternância localizado na barra lateral.
+
+2. **Navegação no Mapa**:
+   - Barra de rolagem horizontal no topo do mapa para acesso rápido aos módulos.
+
+3. **Localização Inteligente**:
+   - Ao clicar em "Localizar" na lista de máquinas, o sistema redireciona para o mapa e rola a tela automaticamente até o módulo onde a máquina se encontra.
+
+4. **Exclusão de Máquinas**:
+   - Botão de lixeira adicionado à lista de inventário com confirmação de segurança antes de apagar o registro.
+
+5. **Módulo de Treinamento**:
+   - Adição da área "TREINAMENTO" no mapa da fábrica, identificada com um ícone de capelo (chapéu de graduação) e visualização dedicada.
+
+6. **Contagem nos Filtros**:
+   - No Inventário, o dropdown de seleção de "Tipos" agora mostra quantas máquinas de cada tipo existem no sistema (ex: "Reta (12)", "Overlock (5)"), facilitando a visão geral.

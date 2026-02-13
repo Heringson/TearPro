@@ -1,9 +1,9 @@
 
-#  Dev_Lima 
+#  Tear_Pro 
 
 > **Gestão Inteligente de Produção Têxtil**
 
-O **Dev_Lima** é um sistema completo para gerenciamento de chão de fábrica, focado em confecções têxteis. Ele oferece controle de inventário de máquinas, mapeamento visual da produção, histórico de manutenções e planejamento de referências.
+O **Tear_Pro** é um sistema completo para gerenciamento de chão de fábrica, focado em confecções têxteis. Ele oferece controle de inventário de máquinas, mapeamento visual da produção, histórico de manutenções e planejamento de referências.
 
 ---
 

@@ -129,7 +129,7 @@ O sistema utiliza o **Local Storage** do navegador para simular um banco de dado
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/dev-lima-manager.git
+   git clone https://github.com/Heringson/TearPro.git
    ```
 
 2. **Instale as dependências:**
